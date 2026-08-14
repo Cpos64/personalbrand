@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #14181c;
+  --paper: #f7f5f0;
+  --paper-raised: #fbfaf7;
+  --brass: #a97b3f;
+  --brass-bright: #c99a5c;
+  --slate: #5b6470;
+  --hairline: #ddd6c9;
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-mono);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-brass: var(--brass);
+  --color-brass-bright: var(--brass-bright);
+  --color-slate: var(--slate);
+  --color-hairline: var(--hairline);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.hairline {
+  border-color: var(--hairline);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background-color: var(--brass);
+  color: var(--paper);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+.prose-custom {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.prose-custom p {
+  margin-bottom: 1.5em;
+}
+
+.prose-custom h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+}
+
+.prose-custom h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.prose-custom ul,
+.prose-custom ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+
+.prose-custom li {
+  margin-bottom: 0.5em;
+}
+
+.prose-custom ul li {
+  list-style-type: none;
+  position: relative;
+}
+
+.prose-custom ul li::before {
+  content: "—";
+  position: absolute;
+  left: -1.4em;
+  color: var(--brass);
+}
+
+.prose-custom a {
+  color: var(--brass);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-custom strong {
+  font-weight: 600;
+}
+
+.prose-custom blockquote {
+  border-left: 2px solid var(--brass);
+  padding-left: 1.25em;
+  color: var(--slate);
+  font-style: italic;
+  margin: 1.5em 0;
+}
+
+.prose-custom code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background-color: var(--paper-raised);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
