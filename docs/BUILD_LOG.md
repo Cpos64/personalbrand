@@ -6,7 +6,9 @@
 
 ## Focus Today
 - [x] Set up build log system (docs/BUILD_LOG.md + docs/BUILD_LOG_TEMPLATE.md, matching Hedgecraft/ledgershell)
-- [ ] Create GitHub repo and push
+- [x] Create GitHub repo and push
+- [ ] Connect to domain (connerposlajko.com)
+- [ ] Deploy to Vercel
 
 ---
 
@@ -18,12 +20,14 @@
 ## What We Accomplished Today
 - Reviewed the project and confirmed local dev works (`npm run dev`, Turbopack, ready in 5s)
 - Added the build log system: `docs/BUILD_LOG_TEMPLATE.md` (instructions for AI agents) and this `docs/BUILD_LOG.md`, copied from the identical pattern used in Hedgecraft and ledgershell
-- GitHub repo creation in progress — no `gh` CLI available in this environment (unlike Hedgecraft/ledgershell), working out the approach with the user
+- Created the GitHub repo (`Cpos64/personalbrand`) and pushed both commits (initial scaffold + build log system) — `master` is up to date with `origin/master`
+- Left off here: repo is live on GitHub but not yet deployed anywhere or connected to a domain
 
 ---
 
 ## Tomorrow
-*(evening session)*
+- [ ] Connect to domain (connerposlajko.com)
+- [ ] Deploy to Vercel
 
 ---
 
